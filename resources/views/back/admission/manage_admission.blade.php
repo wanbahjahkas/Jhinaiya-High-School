@@ -34,6 +34,8 @@ Jhinaiya High School
                           <th>SL NO</th>
                           <th>Title</th>
                           <th>Description</th>
+                          <th>Father Name</th>
+                          <th>Mother Name</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -44,6 +46,8 @@ Jhinaiya High School
                           <td>{{ ++$i }}</td>
                           <td>{{ $admissions->admission_orientation_title }}</td>
                           <td>{{ $admissions->admission_orientation_description }}</td>
+                          <td>{{ $admissions->parents->father_name}}</td>
+                          <td>{{ $admissions->parents->mother_name}}</td>
                           <td>
                            <a href="" class="mdc-button mdc-menu-button mdc-button--raised">Edit</a>
                            <a href="" class="mdc-button mdc-menu-button mdc-button--raised">Delete</a>

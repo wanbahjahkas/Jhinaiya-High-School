@@ -45,6 +45,39 @@ Jhinaiya High School
     <div class="mdc-notched-outline__trailing"></div>
   </div>
 </div>
+<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
+  <i class="material-icons mdc-text-field__icon">favorite</i>
+  <input class="mdc-text-field__input" id="student_name" name="student_name">
+  <div class="mdc-notched-outline">
+    <div class="mdc-notched-outline__leading"></div>
+    <div class="mdc-notched-outline__notch">
+      <label for="text-field-hero-input" class="mdc-floating-label">Student Name</label>
+    </div>
+    <div class="mdc-notched-outline__trailing"></div>
+  </div>
+</div>
+<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
+  <i class="material-icons mdc-text-field__icon">favorite</i>
+  <input class="mdc-text-field__input" id="student_name" name="father_name">
+  <div class="mdc-notched-outline">
+    <div class="mdc-notched-outline__leading"></div>
+    <div class="mdc-notched-outline__notch">
+      <label for="text-field-hero-input" class="mdc-floating-label">Fater Name</label>
+    </div>
+    <div class="mdc-notched-outline__trailing"></div>
+  </div>
+</div>
+<div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
+  <i class="material-icons mdc-text-field__icon">favorite</i>
+  <input class="mdc-text-field__input" id="student_name" name="mother_name">
+  <div class="mdc-notched-outline">
+    <div class="mdc-notched-outline__leading"></div>
+    <div class="mdc-notched-outline__notch">
+      <label for="text-field-hero-input" class="mdc-floating-label">Mother Name</label>
+    </div>
+    <div class="mdc-notched-outline__trailing"></div>
+  </div>
+</div>
 </div>
 </div>
 </div><br>

@@ -13,6 +13,7 @@ use App\FrontendPracticeWishs;
 use App\FrontendStudentReviews;
 use App\FrontendNotice;
 use App\AdmissionOrientations;
+use App\Parents;
 
 class FrontController extends Controller
 {
@@ -218,18 +219,25 @@ public function ManageMenu(){
    }
 
    public function AddAdmission_save(Request $request){
-
-    $admission = new AdmissionOrientations();
-    $admission->admission_orientation_title = $request->admission_orientation_title;
-    $admission->admission_orientation_description = $request->admission_orientation_description;
-    $admission->save();
+    //return $request->all();
+    //$admission = new AdmissionOrientations();
+   $action = AdmissionOrientations::create($request->except('_token'));
+   $parents_create_data = Parents::create([
+      'admission_id' => $action['id'],
+      'father_name' => $request['father_name'],
+      'mother_name' => $request['mother_name']
+   ]);
+   return  $parents_create_data;  
+    // $admission->admission_orientation_title = $request->admission_orientation_title;
+    // $admission->admission_orientation_description = $request->admission_orientation_description;
+    // $admission->save();
 
     return redirect('/add/notice');  
    }
 
    public function ManageAdmission(){
-     $admission = AdmissionOrientations::all();
-     return view('back.admission.manage_admission', ['admission_message'=>$admission]);
+    $admission = AdmissionOrientations::with('parents')->get();
+    return view('back.admission.manage_admission', ['admission_message'=>$admission]);
    }
 
 }
